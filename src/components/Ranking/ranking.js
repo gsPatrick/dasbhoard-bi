@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import { ExternalLink, Globe, Layout, Clock, MousePointer2, Users, DollarSign, TrendingUp, BarChart3, CheckCircle2 } from 'lucide-react';
 import useIsMobile from '@/hooks/useIsMobile';
 import Chart from '@/components/Chart/chart';
 import Modal from '@/components/Modal/modal';
