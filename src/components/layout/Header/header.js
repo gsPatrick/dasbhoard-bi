@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from 'react';
 import { Search, Bell, User, Calendar, Menu, Filter, X } from 'lucide-react';
 import useIsMobile from '@/hooks/useIsMobile';
 import Modal from '@/components/Modal/modal';

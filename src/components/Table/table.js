@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from 'react';
 import { ExternalLink, Mail, Phone, Calendar, User, TrendingUp, Clock, FileText, Share2, ChevronRight } from 'lucide-react';
 import useIsMobile from '@/hooks/useIsMobile';
 import Modal from '@/components/Modal/modal';

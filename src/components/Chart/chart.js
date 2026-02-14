@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from 'react';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import useIsMobile from '@/hooks/useIsMobile';
 import Modal from '@/components/Modal/modal';
 import styles from './chart.module.css';
