@@ -1,0 +1,655 @@
+.container {
+    background-color: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.titleGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--slate-900);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    font-size: 11px;
+    color: var(--slate-400);
+    font-weight: 500;
+}
+
+.viewAllBtn {
+    background-color: var(--slate-50);
+    border: 1px solid var(--slate-200);
+    color: var(--slate-600);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.viewAllBtn:hover {
+    background-color: var(--slate-100);
+    color: var(--slate-900);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    border-bottom: 1px solid var(--slate-50);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    margin: 0 -8px;
+}
+
+.item:hover {
+    background-color: var(--slate-50);
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.rank {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--slate-100);
+    color: var(--slate-500);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.top1 {
+    background-color: #fffbeb;
+    color: #d97706;
+}
+
+.top2 {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.top3 {
+    background-color: #fff7ed;
+    color: #c2410c;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--slate-900);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatarContainer {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--slate-100);
+    border: 2px solid var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.avatarImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flagContainer {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: var(--slate-50);
+}
+
+.flagImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flag {
+    font-size: 16px;
+}
+
+.extra {
+    font-size: 11px;
+    color: var(--slate-400);
+}
+
+.value {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--slate-900);
+}
+
+/* State Detail Modal Styles */
+.stateDetailHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--slate-50);
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 24px;
+    border: 1px solid var(--slate-100);
+}
+
+.stateMainInfo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.largeFlag {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.largeFlag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.largeFlag span {
+    font-size: 32px;
+}
+
+.stateTitleGroup h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--slate-900);
+    margin: 0;
+}
+
+.stateTitleGroup span {
+    font-size: 13px;
+    color: var(--slate-500);
+    font-weight: 500;
+}
+
+.stateMainMetric {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.metricLabel {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--slate-400);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.stateMainMetric strong {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--slate-900);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.statBox {
+    background-color: var(--white);
+    border: 1px solid var(--slate-100);
+    padding: 16px;
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.statLabel {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--slate-400);
+    text-transform: uppercase;
+}
+
+.statBox strong {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--slate-900);
+}
+
+.citySection {
+    margin-top: 32px;
+}
+
+/* Page Detail Modal Styles */
+.pageDetailHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8fafc;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 24px;
+    border: 1px solid var(--slate-100);
+}
+
+.pageMainInfo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.largeIconBox {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background-color: var(--white);
+    border: 1px solid var(--slate-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.statHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--slate-400);
+    margin-bottom: 4px;
+}
+
+.actionRow {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+/* Affiliate Detail Modal Styles */
+.affiliateDetailHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8fafc;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 24px;
+    border: 1px solid var(--slate-100);
+}
+
+.affiliateMainInfo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.tableTitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--slate-900);
+    margin-bottom: 16px;
+}
+
+/* Base Modal Table Styles */
+.fullTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fullTable th {
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--slate-400);
+    border-bottom: 2px solid var(--slate-100);
+}
+
+.fullTable td {
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--slate-700);
+    border-bottom: 1px solid var(--slate-50);
+}
+
+.indexBadge {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--slate-50);
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.nameCell {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.alignRight {
+    text-align: right !important;
+}
+
+.chartToggleSection {
+    background-color: var(--slate-50);
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--slate-100);
+}
+
+.successToast {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ecfdf5;
+    color: #065f46;
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    border: 1px solid #a7f3d0;
+    animation: slideDown 0.3s ease-out;
+}
+
+.activeBtn {
+    background-color: var(--slate-200) !important;
+    border-color: var(--slate-300) !important;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.clickableRow {
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.clickableRow:hover {
+    background-color: var(--slate-50);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--slate-100);
+}
+
+.pageBtn {
+    background-color: var(--white);
+    border: 1px solid var(--slate-200);
+    color: var(--slate-600);
+    padding: 6px 12px;
+    border-radius: var(--radius-md);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.pageBtn:hover:not(:disabled) {
+    border-color: var(--slate-400);
+    background-color: var(--slate-50);
+    color: var(--slate-900);
+}
+
+.pageBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pageInfo {
+    font-size: 12px;
+    color: var(--slate-500);
+}
+
+.pageInfo strong {
+    color: var(--slate-900);
+}
+
+.modalTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modalTable th {
+    text-align: left;
+    padding: 12px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--slate-400);
+    border-bottom: 2px solid var(--slate-50);
+}
+
+.modalTable td {
+    padding: 12px;
+    font-size: 13px;
+    color: var(--slate-700);
+    border-bottom: 1px solid var(--slate-50);
+}
+
+.modalScrollable {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+/* Scrollbar styles for modalScrollable */
+.modalScrollable::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modalScrollable::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modalScrollable::-webkit-scrollbar-thumb {
+    background: var(--slate-200);
+    border-radius: 3px;
+}
+
+.modalScrollable::-webkit-scrollbar-thumb:hover {
+    background: var(--slate-300);
+}
+
+.expandedList {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 8px;
+    margin-right: -8px;
+}
+
+.expandedList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.expandedList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.expandedList::-webkit-scrollbar-thumb {
+    background: var(--slate-200);
+    border-radius: 3px;
+}
+
+.expandBtn {
+    width: 100%;
+    margin-top: 16px;
+    padding: 10px;
+    background-color: var(--white);
+    border: 1px dashed var(--slate-300);
+    color: var(--slate-500);
+    border-radius: var(--radius-md);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.expandBtn:hover {
+    background-color: var(--slate-50);
+    border-color: var(--slate-400);
+    color: var(--slate-900);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+        gap: 16px;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .title {
+        font-size: 13px;
+        color: var(--slate-600);
+    }
+
+    .item {
+        padding: 12px 0;
+        margin: 0;
+        border-bottom: 1px solid var(--slate-100);
+    }
+
+    .item:hover {
+        background-color: transparent;
+    }
+
+    .rank {
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
+    }
+
+    .value {
+        font-size: 12px;
+    }
+
+    /* Modal Adjustments */
+    .stateDetailHeader,
+    .pageDetailHeader,
+    .affiliateDetailHeader {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+        padding: 16px !important;
+    }
+
+    .stateMainMetric {
+        text-align: left !important;
+    }
+
+    .stateMainMetric strong {
+        font-size: 22px !important;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .modalTable th,
+    .modalTable td {
+        padding: 8px !important;
+        font-size: 11px !important;
+    }
+
+    .actionRow {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+
+    .largeFlag,
+    .largeIconBox {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .stateTitleGroup h2 {
+        font-size: 18px !important;
+    }
+}

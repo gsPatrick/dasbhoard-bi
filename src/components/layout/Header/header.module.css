@@ -1,0 +1,273 @@
+.header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--slate-200);
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.topRow {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-bottom: 1px solid var(--slate-100);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logoIcon {
+    width: 32px;
+    height: 32px;
+    background-color: var(--accent-red);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.logoText {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--slate-900);
+    letter-spacing: -0.5px;
+}
+
+.badge {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--slate-400);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    background-color: var(--slate-50);
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.searchContainer {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 12px;
+    color: var(--slate-400);
+}
+
+.searchInput {
+    width: 100%;
+    height: 38px;
+    background-color: var(--slate-50);
+    border: 1px solid var(--slate-200);
+    border-radius: 8px;
+    padding: 0 12px 0 40px;
+    font-size: 13px;
+    color: var(--slate-900);
+    transition: all var(--transition-fast);
+}
+
+.searchInput:focus {
+    outline: none;
+    background-color: var(--white);
+    border-color: var(--slate-400);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.02);
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.datePicker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    background-color: var(--slate-50);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-md);
+    color: var(--slate-600);
+    transition: all var(--transition-fast);
+}
+
+.datePicker:hover {
+    background-color: var(--slate-50);
+}
+
+.iconButton {
+    background: none;
+    border: none;
+    color: var(--slate-500);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all var(--transition-fast);
+}
+
+.iconButton:hover {
+    background-color: var(--slate-50);
+    color: var(--slate-900);
+}
+
+.notificationDot {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-red);
+    border-radius: 50%;
+    border: 2px solid var(--white);
+}
+
+.userProfile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 16px;
+    border-left: 1px solid var(--slate-100);
+    cursor: pointer;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    background-color: var(--slate-900);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.userName {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--slate-900);
+}
+
+@media (max-width: 768px) {
+    .topRow {
+        height: 56px;
+        padding: 0 16px;
+    }
+
+    .logoIcon {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    .rightSection {
+        gap: 8px;
+    }
+
+    .userProfile {
+        padding-left: 8px;
+        border: none;
+    }
+
+    .avatar {
+        width: 28px;
+        height: 28px;
+    }
+
+    .mobileMenu {
+        color: var(--slate-600);
+        margin-right: 12px;
+    }
+
+    .leftSection {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Filters Mobile */
+    .filterModalContent {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .filterDescription {
+        font-size: 14px;
+        color: var(--slate-500);
+    }
+
+    .filterGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .filterOption {
+        padding: 14px;
+        background-color: var(--slate-50);
+        border: 1px solid var(--slate-100);
+        border-radius: 12px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--slate-700);
+        text-align: center;
+        transition: all var(--transition-fast);
+    }
+
+    .activeFilter {
+        background-color: var(--slate-900);
+        color: white;
+        border-color: var(--slate-900);
+    }
+
+    /* Search Mobile */
+    .mobileSearchOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 56px;
+        background-color: var(--white);
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        z-index: 110;
+        border-bottom: 1px solid var(--slate-200);
+        animation: fadeIn 0.2s ease-out;
+    }
+
+    .mobileSearchContainer {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        gap: 12px;
+    }
+
+    .closeSearch {
+        background: none;
+        border: none;
+        color: var(--slate-400);
+        padding: 4px;
+    }
+}
+
+/* Navigation styles removed */
